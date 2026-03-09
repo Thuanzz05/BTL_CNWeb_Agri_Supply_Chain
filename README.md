@@ -44,40 +44,65 @@ CNWeb_Agri_Supply_Chain/
 
 ## Microservices
 
+<<<<<<< HEAD
 ### 1. AuthService (Port: 5001)
+=======
+### 1. AuthService
+>>>>>>> fae431a834389dc8a291d7a906077672b7f0ee39
 - Đăng nhập/Đăng ký
 - Tạo và xác thực JWT Token
 - Quản lý phiên đăng nhập
 
+<<<<<<< HEAD
 ### 2. NongDanService (Port: 5002)
+=======
+### 2. NongDanService
+>>>>>>> fae431a834389dc8a291d7a906077672b7f0ee39
 - CRUD Nông dân
 - Quản lý sản phẩm nông sản
 - Quản lý đơn hàng bán cho đại lý
 
+<<<<<<< HEAD
 ### 3. DaiLyService (Port: 5003)
+=======
+### 3. DaiLyService 
+>>>>>>> fae431a834389dc8a291d7a906077672b7f0ee39
 - CRUD Đại lý
 - Quản lý kho hàng
 - Quản lý đơn hàng từ nông dân
 - Quản lý đơn hàng bán cho siêu thị
 - Kiểm định chất lượng
 
+<<<<<<< HEAD
 ### 4. SieuThiService (Port: 5004)
+=======
+### 4. SieuThiService
+>>>>>>> fae431a834389dc8a291d7a906077672b7f0ee39
 - CRUD Siêu thị
 - Quản lý đơn hàng từ đại lý
 - Quản lý bán hàng cho khách
 
+<<<<<<< HEAD
 ### 5. AdminService (Port: 5005)
+=======
+### 5. AdminService
+>>>>>>> fae431a834389dc8a291d7a906077672b7f0ee39
 - Quản lý toàn bộ hệ thống
 - Báo cáo thống kê
 - Quản lý người dùng
 
+<<<<<<< HEAD
 ### 6. Gateway (Port: 5000)
+=======
+### 6. Gateway 
+>>>>>>> fae431a834389dc8a291d7a906077672b7f0ee39
 - Định tuyến requests
 - Load balancing
 - Authentication middleware
 - CORS handling
 
 ## Cài đặt và chạy
+<<<<<<< HEAD
 
 ### Yêu cầu
 - .NET 8.0 SDK
@@ -97,6 +122,8 @@ dotnet restore
 dotnet build
 ```
 
+=======
+>>>>>>> fae431a834389dc8a291d7a906077672b7f0ee39
 ### Chạy từng service
 ```bash
 # Chạy Gateway
@@ -122,9 +149,17 @@ Sử dụng SQL Server với ADO.NET (không Entity Framework)
 ## API Documentation
 
 Mỗi service sẽ có Swagger UI tại:
+<<<<<<< HEAD
 - AuthService: `https://localhost:5001/swagger`
 - NongDanService: `https://localhost:5002/swagger`
 - DaiLyService: `https://localhost:5003/swagger`
 - SieuThiService: `https://localhost:5004/swagger`
 - AdminService: `https://localhost:5005/swagger`
+=======
+- AuthService: `https://localhost:xxxx/swagger`
+- NongDanService: `https://localhost:xxxx/swagger`
+- DaiLyService: `https://localhost:xxxx/swagger`
+- SieuThiService: `https://localhost:xxxx/swagger`
+- AdminService: `https://localhost:xxxx/swagger`
+>>>>>>> fae431a834389dc8a291d7a906077672b7f0ee39
 
