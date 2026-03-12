@@ -24,6 +24,8 @@ builder.Services.AddCors(options =>
 // Register dependencies
 builder.Services.AddScoped<INongDanRepository, NongDanRepository>();
 builder.Services.AddScoped<INongDanService, NongDanService.Services.NongDanService>();
+builder.Services.AddScoped<ITrangTraiRepository, TrangTraiRepository>();
+builder.Services.AddScoped<ITrangTraiService, TrangTraiService>();
 
 var app = builder.Build();
 
