@@ -1,0 +1,21 @@
+namespace NongDanService.Models.DTOs
+{
+    public class LoNongSanDTO
+    {
+        public int MaLo { get; set; }
+        public int MaTrangTrai { get; set; }
+        public int MaSanPham { get; set; }
+        public decimal SoLuongBanDau { get; set; }
+        public decimal SoLuongHienTai { get; set; }
+        public DateTime? NgayThuHoach { get; set; }
+        public DateTime? HanSuDung { get; set; }
+        public string? MaQR { get; set; }
+        public string TrangThai { get; set; } = string.Empty;
+        public DateTime NgayTao { get; set; }
+        
+        // Thông tin liên quan
+        public string? TenTrangTrai { get; set; }
+        public string? TenSanPham { get; set; }
+        public string? DonViTinh { get; set; }
+    }
+}
