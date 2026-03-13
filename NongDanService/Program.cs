@@ -26,6 +26,8 @@ builder.Services.AddScoped<INongDanRepository, NongDanRepository>();
 builder.Services.AddScoped<INongDanService, NongDanService.Services.NongDanService>();
 builder.Services.AddScoped<ITrangTraiRepository, TrangTraiRepository>();
 builder.Services.AddScoped<ITrangTraiService, TrangTraiService>();
+builder.Services.AddScoped<ISanPhamRepository, SanPhamRepository>();
+builder.Services.AddScoped<ISanPhamService, SanPhamService>();
 
 var app = builder.Build();
 
