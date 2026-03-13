@@ -28,6 +28,8 @@ builder.Services.AddScoped<ITrangTraiRepository, TrangTraiRepository>();
 builder.Services.AddScoped<ITrangTraiService, TrangTraiService>();
 builder.Services.AddScoped<ISanPhamRepository, SanPhamRepository>();
 builder.Services.AddScoped<ISanPhamService, SanPhamService>();
+builder.Services.AddScoped<ILoNongSanRepository, LoNongSanRepository>();
+builder.Services.AddScoped<ILoNongSanService, LoNongSanService>();
 
 var app = builder.Build();
 
