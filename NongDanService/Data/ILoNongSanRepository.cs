@@ -12,7 +12,6 @@ namespace NongDanService.Data
         List<LoNongSanDTO> GetByTrangThai(string trangThai);
         int Create(LoNongSanCreateDTO dto);
         bool Update(int id, LoNongSanUpdateDTO dto);
-        bool UpdateSoLuong(int id, decimal soLuongMoi);
         bool Delete(int id);
     }
 }

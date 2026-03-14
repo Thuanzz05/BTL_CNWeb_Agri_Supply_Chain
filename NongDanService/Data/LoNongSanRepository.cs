@@ -321,36 +321,7 @@ namespace NongDanService.Data
             }
         }
 
-        public bool UpdateSoLuong(int id, decimal soLuongMoi)
-        {
-            try
-            {
-                using var conn = new SqlConnection(_connectionString);
-                using var cmd = new SqlCommand(@"
-                    UPDATE LoNongSan 
-                    SET SoLuongHienTai = @SoLuongMoi 
-                    WHERE MaLo = @MaLo", conn);
 
-                cmd.Parameters.AddWithValue("@MaLo", id);
-                cmd.Parameters.AddWithValue("@SoLuongMoi", soLuongMoi);
-
-                conn.Open();
-                var rowsAffected = cmd.ExecuteNonQuery();
-                
-                if (rowsAffected > 0)
-                {
-                    _logger.LogInformation("Updated quantity for crop lot {LotId} to {NewQuantity}", id, soLuongMoi);
-                    return true;
-                }
-                
-                return false;
-            }
-            catch (SqlException ex)
-            {
-                _logger.LogError(ex, "SQL error occurred while updating quantity for crop lot {LotId}", id);
-                throw new Exception("Lỗi cập nhật số lượng lô nông sản", ex);
-            }
-        }
 
         public bool Delete(int id)
         {

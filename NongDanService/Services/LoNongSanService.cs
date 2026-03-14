@@ -28,8 +28,6 @@ namespace NongDanService.Services
 
         public bool Update(int id, LoNongSanUpdateDTO dto) => _repo.Update(id, dto);
 
-        public bool UpdateSoLuong(int id, decimal soLuongMoi) => _repo.UpdateSoLuong(id, soLuongMoi);
-
         public bool Delete(int id) => _repo.Delete(id);
     }
 }

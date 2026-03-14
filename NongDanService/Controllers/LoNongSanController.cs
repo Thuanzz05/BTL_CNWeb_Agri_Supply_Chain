@@ -343,60 +343,7 @@ namespace NongDanService.Controllers
             }
         }
 
-        /// <summary>
-        /// Cập nhật số lượng lô nông sản
-        /// </summary>
-        /// <param name="id">Mã lô nông sản</param>
-        /// <param name="soLuongMoi">Số lượng mới</param>
-        /// <returns>Kết quả cập nhật</returns>
-        [HttpPut("update-so-luong/{id}")]
-        public IActionResult UpdateSoLuong(int id, [FromBody] decimal soLuongMoi)
-        {
-            try
-            {
-                if (id <= 0)
-                {
-                    return BadRequest(new
-                    {
-                        success = false,
-                        message = "ID lô nông sản không hợp lệ"
-                    });
-                }
 
-                if (soLuongMoi < 0)
-                {
-                    return BadRequest(new
-                    {
-                        success = false,
-                        message = "Số lượng không được âm"
-                    });
-                }
-
-                bool result = _loNongSanService.UpdateSoLuong(id, soLuongMoi);
-                if (!result)
-                {
-                    return NotFound(new
-                    {
-                        success = false,
-                        message = "Không tìm thấy lô nông sản để cập nhật"
-                    });
-                }
-
-                return Ok(new
-                {
-                    success = true,
-                    message = "Cập nhật số lượng lô nông sản thành công"
-                });
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, new
-                {
-                    success = false,
-                    message = "Lỗi server: " + ex.Message
-                });
-            }
-        }
 
         /// <summary>
         /// Xóa lô nông sản
